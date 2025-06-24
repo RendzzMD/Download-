@@ -14,6 +14,8 @@
       --ios-blue: #0a84ff;
       --ios-green: #30d158;
       --ios-border: #2c2c2e;
+      --telegram-color: #0088cc;
+      --whatsapp-color: #25D366;
     }
     * {
       margin: 0;
@@ -76,11 +78,31 @@
       margin: 25px 0;
       cursor: pointer;
     }
-    .download-btn:hover {
+    .social-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      padding: 15px 20px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 17px;
+      transition: all 0.2s;
+      margin: 10px 0;
+      cursor: pointer;
+    }
+    .telegram-btn {
+      background-color: var(--telegram-color);
+    }
+    .whatsapp-btn {
+      background-color: var(--whatsapp-color);
+    }
+    .download-btn:hover, .social-btn:hover {
       opacity: 0.9;
       transform: scale(0.98);
     }
-    .download-btn i {
+    .download-btn i, .social-btn i {
       margin-right: 10px;
       font-size: 20px;
     }
@@ -119,6 +141,9 @@
       color: var(--ios-subtext);
       font-size: 16px;
     }
+    .social-buttons {
+      margin-top: 20px;
+    }
   </style>
 </head>
 <body>
@@ -143,6 +168,15 @@
       <p>Link SC di bawah ini yaa</p>
       <a class="download-btn" onclick="sendTelegramAndDownload()">
         <i class="fas fa-download"></i> Download Now
+      </a>
+    </div>
+
+    <div class="social-buttons">
+      <a href="https://t.me/rendzzz12" class="social-btn telegram-btn" target="_blank">
+        <i class="fab fa-telegram"></i> Telegram Admin
+      </a>
+      <a href="https://whatsapp.com/channel/0029VbAbEyo5K3zWkfYkkH0x" class="social-btn whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i> WhatsApp Channel
       </a>
     </div>
   </div>
@@ -198,4 +232,4 @@ Tanggal : ${tanggal}
     });
   </script>
 </body>
-</html>
+  </html>
